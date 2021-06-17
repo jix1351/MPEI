@@ -4,7 +4,7 @@ site_author: Aladdin
 site_url: https://mpei.space/
 
 repo_url: https://github.com/Alaladdin/MPEI/
-edit_uri: edit/main/docs/
+edit_uri: blob/main/docs/
 copyright: By <a href="https://github.com/Alaladdin/" target="_blank" rel="nofollow noopener">Alaladdin</a>
 
 theme:
@@ -15,11 +15,9 @@ theme:
     scheme: slate
     primary: deep purple
     accent: deep purple
-
   features:
     - navigation.tabs
     - navigation.sections
-
   font:
     text: Roboto
     code: Roboto Mono
@@ -42,6 +40,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.arithmatex
+  - pymdownx.inlinehilite
   #  - pymdownx.tasklist:
   #      custom_checkbox: true
   - pymdownx.emoji:
@@ -51,6 +50,7 @@ markdown_extensions:
 plugins:
   - awesome-pages
   - macros
+  - tooltips
   - search:
       lang:
         - ru
@@ -67,17 +67,18 @@ plugins:
       htmlmin_opts:
         remove_comments: true
       js_files:
-        - assets/css/main.css
         - /assets/js/main.js
 
 extra_css:
-  - assets/css/main.css
+  - /assets/css/main.css
+  - /assets/css/hint.min.css
   - https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.css
 
 extra_javascript:
   - /assets/js/main.js
   - https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.js
+  - https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/native.history.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.0/toastify.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML
 
 extra:
